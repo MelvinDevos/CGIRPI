@@ -1,0 +1,9 @@
+body {
+    background-color: #1e1e2d; /* Voor browsers zonder gradient support */
+    background-image: linear-gradient(
+      to bottom right,
+      #1e1e2e,
+      #1e1e24
+    ); /* Subtiele gradient */
+    height: 100vh;
+  }
