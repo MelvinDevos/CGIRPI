@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Opdracht 2: CGI</title>
 
-    <!-- Maak een link naar onze eigen CSS. -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Maak een link naar onze eigen JavaScript. -->
     <script src="script.js"></script>
 
     <link
@@ -43,18 +41,10 @@
 
       <div class="row py-5">
         <div class="col light-container shadow p-4">
-          <form method="POST" action="http://rpi-Melvin">
-            <div class="mb-3">
-              <label for="input_name" class="form-label text-white">Naam</label>
-              <input
-                type="email"
-                class="form-control"
-                id="input_name"
-                aria-describedby="emailHelp"
-              />
-            </div>
-
-            <button type="submit" class="btn btn-success mx-auto">Submit</button>
+          <form method="POST" action="http://rpi-Melvin/cgi-bin/PROJECT-CGI">
+            <label for="name" class="form-label text-white">Naam persoon</label>
+            <input type="TEXT" class="form-control mb-3" name="name" size="20" maxlength="25" />
+            <input type="Submit" name="Submit This Form" />
           </form>
         </div>
       </div>

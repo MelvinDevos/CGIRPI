@@ -11,18 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       response.json().then((data) => {
-
         // Voor elk datapunt in array table row aanmaken
         data.forEach((i) => {
-          console.log(i)
-        document.getElementById("table-body").innerHTML += `<tr> <td>${i.id}</td> <td>${i.name}</td> <td>${i.submit_time}</td></tr>`;
+          console.log(i);
+          document.getElementById(
+            "table-body"
+          ).innerHTML += `<tr> <td>${i.id}</td> <td>${i.name}</td> <td>${i.submit_time}</td></tr>`;
         });
-
-        // // Table afsluiten
-        // htmlString += "</table>";
-        // document.getElementById("fieldset-uitslagen").innerHTML += htmlString;
-        // // Grafiek tekenen met data array
-        // drawChart(data.data);
       });
     })
     .catch((error) => {
