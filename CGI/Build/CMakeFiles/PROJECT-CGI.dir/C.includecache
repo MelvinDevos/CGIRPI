@@ -9,6 +9,8 @@
 /var/www/html/CGIRPI/CGI/env-cgi.c
 stdio.h
 -
+time.h
+-
 stdlib.h
 -
 
