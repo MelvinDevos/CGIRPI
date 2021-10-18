@@ -8,7 +8,6 @@
 #define MAXINPUT MAXLEN + EXTRA + 2
 
 void add_to_json(char *key, char *value);
-void url_enc_key_value(char *input, char *key, char *value);
 
 void unencode(char *src, char *last, char *dest)
 {
@@ -35,9 +34,10 @@ int main(void)
     char input[MAXINPUT], data[MAXINPUT];
     char key[50], value[50];
     long len;
-    printf("%s%c%c\n", "Content-Type:application/json;charset=iso-8859-1", 13, 10);
-    //printf("%s%c%c\n", "Content-Type:text/html;charset=iso-8859-1", 13, 10);
-    //printf("<TITLE>Response</TITLE>\n");
+    printf("%s", "Set-Cookie:id=25565;");
+    printf("%s%c%c\n", "Content-Type:application/json", 13, 10);
+    //printf("%s%c%c\n", "Content-Type:application/json;charset=iso-8859-1", 13, 10);
+
     lenstr = getenv("CONTENT_LENGTH");
     sscanf(lenstr, "%ld", &len) != 1;
     fgets(input, len + 1, stdin);

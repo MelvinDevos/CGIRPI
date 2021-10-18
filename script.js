@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       response.json().then((data) => {
         // Voor elk datapunt in array table row aanmaken
-
         data.forEach((i) => {
           console.log(i);
           addToTable(json_table, index_table++, i.name, i.submit_date);
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((body) => {
         // TODO handle body
         console.log(body);
-        addToTable(json_table, index_table++, body.name, body.submit_date)
+        addToTable(json_table, index_table++, body.name, body.submit_date);
       })
       .catch((error) => {
         // TODO handle error
